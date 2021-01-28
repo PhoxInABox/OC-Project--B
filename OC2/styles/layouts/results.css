@@ -1,0 +1,64 @@
+
+.results-info {
+  margin: 42px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.results-info .results-info__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #f2f2f2;
+  border-radius: 30px;
+  padding: 8px;
+  width: 16px;
+  height: 16px;
+  margin-right: 11px;
+}
+
+
+
+.results {
+  margin-bottom: 63px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+
+.results section.results__accomodation {
+  grid-column: span 2;
+}
+
+.results section.results__popular {
+  display: flex;
+  flex-direction: column;
+}
+
+.results section.results__activities {
+  grid-column: span 3;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1090px) {
+  .results {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .results section.results__accomodation {
+    order: 2;
+    background-color: unset;
+  }
+
+  .results section.results__popular {
+    order: 1;
+  }
+
+  .results section.results__activities {
+    order: 3;
+  }
+}
